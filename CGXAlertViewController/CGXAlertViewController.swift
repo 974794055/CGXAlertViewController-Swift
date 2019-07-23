@@ -24,10 +24,13 @@ class CGXAlertViewController: NSObject {
         }
         self.showAlert(title: title, message: message, btnArr: btnArr, btnColorArr: colorA, selectBlock: selectBlock, preferredStyle: preferredStyle)
     }
+    
     class func showAlert(title: String?, message: String?,btnArr:[String],btnColorArr:[UIColor],selectBlock:@escaping AlertSelectBlock,preferredStyle:UIAlertController.Style) {
-        self.showAlert(Title: title, TitleColor: UIColor.black, TitleFont: UIFont.systemFont(ofSize: 14), Message: message, MessageColor: UIColor.black, MessageFont: UIFont.systemFont(ofSize: 14), btnArr: btnArr, btnColorArr: btnColorArr, selectBlock: selectBlock, preferredStyle: preferredStyle)
+        self.showAlertView(Title: title, TitleColor: UIColor.black, TitleFont: UIFont.systemFont(ofSize: 17), Message: message, MessageColor: UIColor.black, MessageFont: UIFont.systemFont(ofSize: 15), btnArr: btnArr, btnColorArr: btnColorArr, selectBlock: selectBlock, preferredStyle: preferredStyle)
     }
-    class func showAlert(Title title: String?,TitleColor titleColor : UIColor ,TitleFont titleFont : UIFont, Message message: String?,MessageColor messageColor : UIColor ,MessageFont messageFont : UIFont,btnArr:[String],btnColorArr:[UIColor],selectBlock:@escaping AlertSelectBlock,preferredStyle:UIAlertController.Style) {
+    
+    
+    private class func showAlertView(Title title: String?,TitleColor titleColor : UIColor ,TitleFont titleFont : UIFont, Message message: String?,MessageColor messageColor : UIColor ,MessageFont messageFont : UIFont,btnArr:[String],btnColorArr:[UIColor],selectBlock:@escaping AlertSelectBlock,preferredStyle:UIAlertController.Style) {
         
         assert((btnArr.count == btnColorArr.count), "按钮数组和颜色数组个数必须相等")
         let actionSheet = UIAlertController.init(title: title, message: message, preferredStyle: preferredStyle)

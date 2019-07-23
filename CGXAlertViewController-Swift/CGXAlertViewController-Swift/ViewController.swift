@@ -13,7 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        CGXAlertViewController.showAlert(title: "温馨提示", message: "http", btnArr: ["取消","确认"]) { (str) in
+            print(str)
+        }
     }
+    
 
 
 }
