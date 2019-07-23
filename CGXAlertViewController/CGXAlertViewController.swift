@@ -14,6 +14,7 @@ class CGXAlertViewController: NSObject {
     typealias AlertSelectBlock = (_ btnStr :String) ->()
     var selectBlock: AlertSelectBlock!
     
+    
     class func showAlert(title: String?, message: String?,btnArr:[String],selectBlock:@escaping AlertSelectBlock) {
         self.showAlert(title: title, message: message, btnArr: btnArr, selectBlock: selectBlock, preferredStyle: .alert)
     }
