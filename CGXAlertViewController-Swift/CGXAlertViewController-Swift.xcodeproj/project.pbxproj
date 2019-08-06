@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C6250A22F7FDB600491FD6 /* CGXAlertActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6250922F7FDB600491FD6 /* CGXAlertActionModel.swift */; };
+		04C6250C22F7FE8B00491FD6 /* CGXAlertTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6250B22F7FE8B00491FD6 /* CGXAlertTitleModel.swift */; };
 		04CBFC7E22E6DB3800AD104B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFC7D22E6DB3800AD104B /* AppDelegate.swift */; };
 		04CBFC8022E6DB3800AD104B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFC7F22E6DB3800AD104B /* ViewController.swift */; };
 		04CBFC8322E6DB3800AD104B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFC8122E6DB3800AD104B /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C6250922F7FDB600491FD6 /* CGXAlertActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGXAlertActionModel.swift; sourceTree = "<group>"; };
+		04C6250B22F7FE8B00491FD6 /* CGXAlertTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGXAlertTitleModel.swift; sourceTree = "<group>"; };
 		04CBFC7A22E6DB3800AD104B /* CGXAlertViewController-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CGXAlertViewController-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CBFC7D22E6DB3800AD104B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CBFC7F22E6DB3800AD104B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				04CBFC9222E6DCAF00AD104B /* CGXAlertViewController.swift */,
+				04C6250922F7FDB600491FD6 /* CGXAlertActionModel.swift */,
+				04C6250B22F7FE8B00491FD6 /* CGXAlertTitleModel.swift */,
 			);
 			name = CGXAlertViewController;
 			path = ../../CGXAlertViewController;
@@ -147,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C6250C22F7FE8B00491FD6 /* CGXAlertTitleModel.swift in Sources */,
 				04CBFC8022E6DB3800AD104B /* ViewController.swift in Sources */,
+				04C6250A22F7FDB600491FD6 /* CGXAlertActionModel.swift in Sources */,
 				04CBFC7E22E6DB3800AD104B /* AppDelegate.swift in Sources */,
 				04CBFC9322E6DCAF00AD104B /* CGXAlertViewController.swift in Sources */,
 			);

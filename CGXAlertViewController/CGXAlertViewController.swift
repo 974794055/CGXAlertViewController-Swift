@@ -9,55 +9,86 @@
 import UIKit
 
 class CGXAlertViewController: NSObject {
-    /// 声明一个 Block
+     // 按钮点击事件block
+    typealias CGXAlertViewControllerSelectBlock = (_  title: String, _ message: String ,_ btnStr :String) ->()
+    typealias CGXAlertViewControllerTitleBlock = (_  titleModel: CGXAlertTitleModel) ->(Void)
+    typealias CGXAlertViewControllerActionBlock = (_  actionModel: CGXAlertActionModel) ->()
     
-    typealias AlertSelectBlock = (_ btnStr :String) ->()
-    var selectBlock: AlertSelectBlock!
-    
-    
-    class func showAlert(title: String?, message: String?,btnArr:[String],selectBlock:@escaping AlertSelectBlock) {
-        self.showAlert(title: title, message: message, btnArr: btnArr, selectBlock: selectBlock, preferredStyle: .alert)
-    }
-    class func showAlert(title: String?, message: String?,btnArr:[String],selectBlock:@escaping AlertSelectBlock,preferredStyle:UIAlertController.Style) {
-        var colorA = [UIColor]()
-        for _ in 0..<btnArr.count {
-            colorA.append(UIColor.black)
-        }
-        self.showAlert(title: title, message: message, btnArr: btnArr, btnColorArr: colorA, selectBlock: selectBlock, preferredStyle: preferredStyle)
+
+    class func showAlert(title: String?, message: String?,btnArr:[String],selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+        self.showAlert(title: title, message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
+            
+        }, actionBlock: { (actionModel) in
+            
+        }, selectBlock: selectBlock)
     }
     
-    class func showAlert(title: String?, message: String?,btnArr:[String],btnColorArr:[UIColor],selectBlock:@escaping AlertSelectBlock,preferredStyle:UIAlertController.Style) {
-        self.showAlertView(Title: title, TitleColor: UIColor.black, TitleFont: UIFont.systemFont(ofSize: 17), Message: message, MessageColor: UIColor.black, MessageFont: UIFont.systemFont(ofSize: 15), btnArr: btnArr, btnColorArr: btnColorArr, selectBlock: selectBlock, preferredStyle: preferredStyle)
+    class func showAlert(title: String?, message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+        self.showAlertView(Title: title, Message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
+            
+        }, actionBlock: { (actionModel) in
+            
+        }, selectBlock: selectBlock, preferredStyle: .alert)
+    }
+    
+    class func showAction(title: String?, message: String?,btnArr:[String],selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+        self.showAction(title: title, message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
+            
+        }, actionBlock: { (actionModel) in
+            
+        }, selectBlock: selectBlock)
+    }
+    
+    class func showAction(title: String?, message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+        self.showAlertView(Title: title, Message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
+            
+        }, actionBlock: { (actionModel) in
+            
+        }, selectBlock: selectBlock, preferredStyle: .actionSheet)
     }
     
     
-    private class func showAlertView(Title title: String?,TitleColor titleColor : UIColor ,TitleFont titleFont : UIFont, Message message: String?,MessageColor messageColor : UIColor ,MessageFont messageFont : UIFont,btnArr:[String],btnColorArr:[UIColor],selectBlock:@escaping AlertSelectBlock,preferredStyle:UIAlertController.Style) {
+    
+
+    private class func showAlertView(Title title: String?,Message message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock,preferredStyle:UIAlertController.Style) {
+
+        let titleModel:CGXAlertTitleModel = CGXAlertTitleModel.init()
+     
+        titleBlock(titleModel)
         
-        assert((btnArr.count == btnColorArr.count), "按钮数组和颜色数组个数必须相等")
         let actionSheet = UIAlertController.init(title: title, message: message, preferredStyle: preferredStyle)
         actionSheet.view.tintColor = UIColor.black
         if title!.count > 0 {
             let titleStr = NSMutableAttributedString.init(string: title! + "\n")
-            titleStr.addAttribute(NSAttributedString.Key.foregroundColor, value: titleColor, range: NSRange.init(location: 0, length: title!.count))
-            titleStr.addAttribute(NSAttributedString.Key.font, value: titleFont, range: NSRange.init(location: 0, length: title!.count))
+            titleStr.addAttribute(NSAttributedString.Key.foregroundColor, value: titleModel.titleColor, range: NSRange.init(location: 0, length: title!.count))
+            titleStr.addAttribute(NSAttributedString.Key.font, value: titleModel.titleFont, range: NSRange.init(location: 0, length: title!.count))
             actionSheet.setValue(titleStr, forKey: "attributedTitle")
         }
         if message!.count > 0 {
             let messageStr = NSMutableAttributedString.init(string: message!)
-            messageStr.addAttribute(NSAttributedString.Key.foregroundColor, value: messageColor, range: NSRange.init(location: 0, length: message!.count))
-            messageStr.addAttribute(NSAttributedString.Key.font, value: messageFont, range: NSRange.init(location: 0, length: message!.count))
+            messageStr.addAttribute(NSAttributedString.Key.foregroundColor, value: titleModel.messageColor, range: NSRange.init(location: 0, length: message!.count))
+            messageStr.addAttribute(NSAttributedString.Key.font, value: titleModel.messageFont, range: NSRange.init(location: 0, length: message!.count))
             actionSheet.setValue(messageStr, forKey: "attributedMessage")
         }
+        
         for index in 0..<btnArr.count {
             let btnStr = btnArr[index]
-            let btnColor = btnColorArr[index]
             
-            let btnAction = UIAlertAction.init(title: btnStr, style: .default) { (action) in
-                selectBlock(action.title!)
+            let actionModel:CGXAlertActionModel = CGXAlertActionModel.init()
+            actionModel.title = btnStr
+            if (actionModel.title == "取消" || actionModel.title == "cancel") {
+                actionModel.style = UIAlertAction.Style.cancel;
             }
-            btnAction.setValue(btnColor, forKey: "titleTextColor")
+            actionBlock(actionModel)
+            
+            let btnAction = UIAlertAction.init(title: actionModel.title, style: actionModel.style) { (action) in
+                selectBlock(title!,message!,actionModel.title!)
+            }
+            btnAction.setValue(actionModel.titleColor, forKey: "titleTextColor")
             actionSheet.addAction(btnAction)
         }
         UIApplication.shared.keyWindow?.rootViewController?.present(actionSheet, animated: true, completion: { })
     }
+    
 }
+
