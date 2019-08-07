@@ -25,6 +25,7 @@ class ViewController: UIViewController {
 //        }) { (title, message, btnStr) in
 //
 //        }
+        
         CGXAlertViewController.showAlert(title: "温馨提示", message: "http", btnArr: ["取消","确认"], titleBlock: { (titleModel) -> (Void) in
             
         }, actionBlock: { (actionModel) in

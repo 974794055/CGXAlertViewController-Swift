@@ -14,7 +14,14 @@ class CGXAlertViewController: NSObject {
     typealias CGXAlertViewControllerTitleBlock = (_  titleModel: CGXAlertTitleModel) ->(Void)
     typealias CGXAlertViewControllerActionBlock = (_  actionModel: CGXAlertActionModel) ->()
     
-
+     /*
+     title：标题
+     message：提示语
+     btnArr：按钮数组
+     selectBlock：点击按钮回调
+     titleBlock:修改标题、提示语字体、颜色
+     actionBlock：修改按钮字体、颜色
+     */
     class func showAlert(title: String?, message: String?,btnArr:[String],selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
         self.showAlert(title: title, message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
             
@@ -47,13 +54,15 @@ class CGXAlertViewController: NSObject {
         }, selectBlock: selectBlock, preferredStyle: .actionSheet)
     }
     
-    
-    
 
+}
+// MARK: - 私有方法
+extension CGXAlertViewController
+{
     private class func showAlertView(Title title: String?,Message message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock,preferredStyle:UIAlertController.Style) {
-
+        
         let titleModel:CGXAlertTitleModel = CGXAlertTitleModel.init()
-     
+        
         titleBlock(titleModel)
         
         let actionSheet = UIAlertController.init(title: title, message: message, preferredStyle: preferredStyle)
@@ -89,6 +98,5 @@ class CGXAlertViewController: NSObject {
         }
         UIApplication.shared.keyWindow?.rootViewController?.present(actionSheet, animated: true, completion: { })
     }
-    
 }
 
