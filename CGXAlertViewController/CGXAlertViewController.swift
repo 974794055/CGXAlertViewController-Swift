@@ -5,6 +5,14 @@
 //  Created by MacMini-1 on 2019/7/12.
 //  Copyright © 2019 CGX. All rights reserved.
 //
+/**
+下载链接：https://github.com/974794055/CGXAlertViewController-Swift.git
+QQ号：974794055
+群名称：
+CGXAlertViewController交流群
+群   号：
+版本： 1.0.1
+*/
 
 import UIKit
 
