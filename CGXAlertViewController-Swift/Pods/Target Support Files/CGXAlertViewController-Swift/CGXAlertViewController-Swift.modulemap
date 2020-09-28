@@ -1,0 +1,6 @@
+module CGXAlertViewController_Swift {
+  umbrella header "CGXAlertViewController-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

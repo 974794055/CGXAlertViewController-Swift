@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04C6250A22F7FDB600491FD6 /* CGXAlertActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6250922F7FDB600491FD6 /* CGXAlertActionModel.swift */; };
-		04C6250C22F7FE8B00491FD6 /* CGXAlertTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6250B22F7FE8B00491FD6 /* CGXAlertTitleModel.swift */; };
 		04CBFC7E22E6DB3800AD104B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFC7D22E6DB3800AD104B /* AppDelegate.swift */; };
 		04CBFC8022E6DB3800AD104B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFC7F22E6DB3800AD104B /* ViewController.swift */; };
 		04CBFC8322E6DB3800AD104B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFC8122E6DB3800AD104B /* Main.storyboard */; };
 		04CBFC8522E6DB3900AD104B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFC8422E6DB3900AD104B /* Assets.xcassets */; };
 		04CBFC8822E6DB3900AD104B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFC8622E6DB3900AD104B /* LaunchScreen.storyboard */; };
-		04CBFC9322E6DCAF00AD104B /* CGXAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFC9222E6DCAF00AD104B /* CGXAlertViewController.swift */; };
+		B5228ECC25223A9B00AD456B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5228EC925223A9B00AD456B /* README.md */; };
+		B5228ECD25223A9B00AD456B /* CGXAlertViewController-Swift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B5228ECA25223A9B00AD456B /* CGXAlertViewController-Swift.podspec */; };
+		B5228ECE25223A9B00AD456B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B5228ECB25223A9B00AD456B /* LICENSE */; };
+		E7DDD5E92E56C473ED052607 /* libPods-CGXAlertViewController-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D293B388CBFEB10E99484A /* libPods-CGXAlertViewController-Swift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04C6250922F7FDB600491FD6 /* CGXAlertActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGXAlertActionModel.swift; sourceTree = "<group>"; };
-		04C6250B22F7FE8B00491FD6 /* CGXAlertTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGXAlertTitleModel.swift; sourceTree = "<group>"; };
 		04CBFC7A22E6DB3800AD104B /* CGXAlertViewController-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CGXAlertViewController-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CBFC7D22E6DB3800AD104B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CBFC7F22E6DB3800AD104B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +26,12 @@
 		04CBFC8422E6DB3900AD104B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CBFC8722E6DB3900AD104B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CBFC8922E6DB3900AD104B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04CBFC9222E6DCAF00AD104B /* CGXAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGXAlertViewController.swift; sourceTree = "<group>"; };
+		B5228EC925223A9B00AD456B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
+		B5228ECA25223A9B00AD456B /* CGXAlertViewController-Swift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "CGXAlertViewController-Swift.podspec"; path = "../../../CGXAlertViewController-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B5228ECB25223A9B00AD456B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../LICENSE; sourceTree = "<group>"; };
+		C4D293B388CBFEB10E99484A /* libPods-CGXAlertViewController-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CGXAlertViewController-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3D14ABEDCABADB61C951444 /* Pods-CGXAlertViewController-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXAlertViewController-Swift.release.xcconfig"; path = "Target Support Files/Pods-CGXAlertViewController-Swift/Pods-CGXAlertViewController-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		F03E86183B2B74238CF6C53C /* Pods-CGXAlertViewController-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXAlertViewController-Swift.debug.xcconfig"; path = "Target Support Files/Pods-CGXAlertViewController-Swift/Pods-CGXAlertViewController-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DDD5E92E56C473ED052607 /* libPods-CGXAlertViewController-Swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				04CBFC7C22E6DB3800AD104B /* CGXAlertViewController-Swift */,
 				04CBFC7B22E6DB3800AD104B /* Products */,
+				76FEE4F0119D2AF960D8C0DF /* Pods */,
+				C4A893B63997AF71DB34CC39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,10 +67,10 @@
 		04CBFC7C22E6DB3800AD104B /* CGXAlertViewController-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				B5228EC825223A4300AD456B /* Podspec Metadata */,
 				04CBFC7D22E6DB3800AD104B /* AppDelegate.swift */,
 				04CBFC7F22E6DB3800AD104B /* ViewController.swift */,
 				04CBFC8122E6DB3800AD104B /* Main.storyboard */,
-				04CBFC8F22E6DBD100AD104B /* CGXAlertViewController */,
 				04CBFC8422E6DB3900AD104B /* Assets.xcassets */,
 				04CBFC8622E6DB3900AD104B /* LaunchScreen.storyboard */,
 				04CBFC8922E6DB3900AD104B /* Info.plist */,
@@ -71,15 +78,31 @@
 			path = "CGXAlertViewController-Swift";
 			sourceTree = "<group>";
 		};
-		04CBFC8F22E6DBD100AD104B /* CGXAlertViewController */ = {
+		76FEE4F0119D2AF960D8C0DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04CBFC9222E6DCAF00AD104B /* CGXAlertViewController.swift */,
-				04C6250922F7FDB600491FD6 /* CGXAlertActionModel.swift */,
-				04C6250B22F7FE8B00491FD6 /* CGXAlertTitleModel.swift */,
+				F03E86183B2B74238CF6C53C /* Pods-CGXAlertViewController-Swift.debug.xcconfig */,
+				E3D14ABEDCABADB61C951444 /* Pods-CGXAlertViewController-Swift.release.xcconfig */,
 			);
-			name = CGXAlertViewController;
-			path = ../../CGXAlertViewController;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B5228EC825223A4300AD456B /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				B5228ECA25223A9B00AD456B /* CGXAlertViewController-Swift.podspec */,
+				B5228ECB25223A9B00AD456B /* LICENSE */,
+				B5228EC925223A9B00AD456B /* README.md */,
+			);
+			path = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		C4A893B63997AF71DB34CC39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4D293B388CBFEB10E99484A /* libPods-CGXAlertViewController-Swift.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +112,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CBFC8C22E6DB3900AD104B /* Build configuration list for PBXNativeTarget "CGXAlertViewController-Swift" */;
 			buildPhases = (
+				241EB470395FB1CC02F210F4 /* [CP] Check Pods Manifest.lock */,
 				04CBFC7622E6DB3800AD104B /* Sources */,
 				04CBFC7722E6DB3800AD104B /* Frameworks */,
 				04CBFC7822E6DB3800AD104B /* Resources */,
@@ -140,24 +164,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5228ECE25223A9B00AD456B /* LICENSE in Resources */,
 				04CBFC8822E6DB3900AD104B /* LaunchScreen.storyboard in Resources */,
 				04CBFC8522E6DB3900AD104B /* Assets.xcassets in Resources */,
+				B5228ECC25223A9B00AD456B /* README.md in Resources */,
 				04CBFC8322E6DB3800AD104B /* Main.storyboard in Resources */,
+				B5228ECD25223A9B00AD456B /* CGXAlertViewController-Swift.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		241EB470395FB1CC02F210F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CGXAlertViewController-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04CBFC7622E6DB3800AD104B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C6250C22F7FE8B00491FD6 /* CGXAlertTitleModel.swift in Sources */,
 				04CBFC8022E6DB3800AD104B /* ViewController.swift in Sources */,
-				04C6250A22F7FDB600491FD6 /* CGXAlertActionModel.swift in Sources */,
 				04CBFC7E22E6DB3800AD104B /* AppDelegate.swift in Sources */,
-				04CBFC9322E6DCAF00AD104B /* CGXAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +350,7 @@
 		};
 		04CBFC8D22E6DB3900AD104B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F03E86183B2B74238CF6C53C /* Pods-CGXAlertViewController-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +369,7 @@
 		};
 		04CBFC8E22E6DB3900AD104B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3D14ABEDCABADB61C951444 /* Pods-CGXAlertViewController-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

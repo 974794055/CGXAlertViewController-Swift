@@ -11,7 +11,7 @@ QQ号：974794055
 群名称：
 CGXAlertViewController交流群
 群   号：
-版本： 1.0.1
+版本： 1.0.2
 */
 
 import UIKit
@@ -72,8 +72,11 @@ extension CGXAlertViewController
         let titleModel:CGXAlertTitleModel = CGXAlertTitleModel.init()
         
         titleBlock(titleModel)
-        
-        let actionSheet = UIAlertController.init(title: title, message: message, preferredStyle: preferredStyle)
+
+        var actionSheet = UIAlertController.init(title: title, message: message, preferredStyle: preferredStyle)
+        if UIDevice.current.model == "iPad" || UIDevice.current.userInterfaceIdiom == .pad  {
+            actionSheet = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        }
         actionSheet.view.tintColor = UIColor.black
         if title!.count > 0 {
             let titleStr = NSMutableAttributedString.init(string: title! + "\n")
@@ -104,7 +107,10 @@ extension CGXAlertViewController
             btnAction.setValue(actionModel.titleColor, forKey: "titleTextColor")
             actionSheet.addAction(btnAction)
         }
-        UIApplication.shared.keyWindow?.rootViewController?.present(actionSheet, animated: true, completion: { })
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?.rootViewController?.present(actionSheet, animated: true, completion: { }
+            )
+        }
     }
 }
 
