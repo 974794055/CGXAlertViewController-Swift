@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CGXAlertTitleModel: NSObject {
+public class CGXAlertTitleModel: NSObject {
     
     var titleFont: UIFont = UIFont.systemFont(ofSize: 16) /**< 标题的字体 */
     var titleColor: UIColor = UIColor.black   /**< 信息的颜色 */

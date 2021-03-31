@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pods_CGXAlertViewController_Swift
 
 class ViewController: UIViewController {
 

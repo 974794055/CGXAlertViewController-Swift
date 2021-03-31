@@ -12,10 +12,10 @@
 		04CBFC8322E6DB3800AD104B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFC8122E6DB3800AD104B /* Main.storyboard */; };
 		04CBFC8522E6DB3900AD104B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFC8422E6DB3900AD104B /* Assets.xcassets */; };
 		04CBFC8822E6DB3900AD104B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFC8622E6DB3900AD104B /* LaunchScreen.storyboard */; };
+		B24AE21DA506B900BF8F2F7F /* Pods_CGXAlertViewController_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5A7D06864B1024B5E8CF18 /* Pods_CGXAlertViewController_Swift.framework */; };
 		B5228ECC25223A9B00AD456B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5228EC925223A9B00AD456B /* README.md */; };
 		B5228ECD25223A9B00AD456B /* CGXAlertViewController-Swift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B5228ECA25223A9B00AD456B /* CGXAlertViewController-Swift.podspec */; };
 		B5228ECE25223A9B00AD456B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B5228ECB25223A9B00AD456B /* LICENSE */; };
-		E7DDD5E92E56C473ED052607 /* libPods-CGXAlertViewController-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D293B388CBFEB10E99484A /* libPods-CGXAlertViewController-Swift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		04CBFC8422E6DB3900AD104B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CBFC8722E6DB3900AD104B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CBFC8922E6DB3900AD104B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E5A7D06864B1024B5E8CF18 /* Pods_CGXAlertViewController_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGXAlertViewController_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5228EC925223A9B00AD456B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 		B5228ECA25223A9B00AD456B /* CGXAlertViewController-Swift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "CGXAlertViewController-Swift.podspec"; path = "../../../CGXAlertViewController-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B5228ECB25223A9B00AD456B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../LICENSE; sourceTree = "<group>"; };
-		C4D293B388CBFEB10E99484A /* libPods-CGXAlertViewController-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CGXAlertViewController-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D14ABEDCABADB61C951444 /* Pods-CGXAlertViewController-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXAlertViewController-Swift.release.xcconfig"; path = "Target Support Files/Pods-CGXAlertViewController-Swift/Pods-CGXAlertViewController-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		F03E86183B2B74238CF6C53C /* Pods-CGXAlertViewController-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXAlertViewController-Swift.debug.xcconfig"; path = "Target Support Files/Pods-CGXAlertViewController-Swift/Pods-CGXAlertViewController-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DDD5E92E56C473ED052607 /* libPods-CGXAlertViewController-Swift.a in Frameworks */,
+				B24AE21DA506B900BF8F2F7F /* Pods_CGXAlertViewController_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 		C4A893B63997AF71DB34CC39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C4D293B388CBFEB10E99484A /* libPods-CGXAlertViewController-Swift.a */,
+				0E5A7D06864B1024B5E8CF18 /* Pods_CGXAlertViewController_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,6 +116,7 @@
 				04CBFC7622E6DB3800AD104B /* Sources */,
 				04CBFC7722E6DB3800AD104B /* Frameworks */,
 				04CBFC7822E6DB3800AD104B /* Resources */,
+				A03E0043DF89C85DF6363177 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +197,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A03E0043DF89C85DF6363177 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CGXAlertViewController-Swift/Pods-CGXAlertViewController-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CGXAlertViewController-Swift/Pods-CGXAlertViewController-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CGXAlertViewController-Swift/Pods-CGXAlertViewController-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

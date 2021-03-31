@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CGXAlertActionModel: NSObject {
+public class CGXAlertActionModel: NSObject {
 
     var title: String?
     var titleFont: UIFont = UIFont.systemFont(ofSize: 14)
