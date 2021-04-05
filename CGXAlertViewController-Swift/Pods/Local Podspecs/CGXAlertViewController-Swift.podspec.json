@@ -1,6 +1,6 @@
 {
   "name": "CGXAlertViewController-Swift",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "summary": "a CGXAlertViewController系统弹框",
   "description": "a CGXAlertViewController系统弹框封装",
   "homepage": "https://github.com/974794055/CGXAlertViewController-Swift",
@@ -17,7 +17,7 @@
   "swift_versions": "5.0",
   "source": {
     "git": "https://github.com/974794055/CGXAlertViewController-Swift.git",
-    "tag": "1.0.3"
+    "tag": "1.0.4"
   },
   "requires_arc": true,
   "frameworks": [
@@ -25,7 +25,9 @@
     "Foundation",
     "CoreLocation"
   ],
-  "source_files": "CGXAlertViewController/*.{swift}",
-  "social_media_url": "https://github.com/974794055",
+  "source_files": [
+    "CGXAlertViewController",
+    "CGXAlertViewController/**/*.(swift)"
+  ],
   "swift_version": "5.0"
 }

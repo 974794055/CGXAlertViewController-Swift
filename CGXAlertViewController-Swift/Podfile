@@ -3,7 +3,6 @@ target "CGXAlertViewController-Swift" do
   use_frameworks!
   pod 'CGXAlertViewController-Swift', :path => '../'
 
-
 end
 
 

@@ -7,7 +7,7 @@ QQ号：974794055
 群名称：
 CGXAlertViewController交流群
 群   号：
-版本： 1.0.3
+版本： 1.0.4
 */
 系统UIAlertVIewController封装库
 -  功能：
@@ -18,3 +18,5 @@ CGXAlertViewController交流群
 1. 优化cell点击触发延迟问题
 2. 适配ipad的ActionSheet弹出崩溃问题 
 
+## V1.0.4版本
+1. 修复优化

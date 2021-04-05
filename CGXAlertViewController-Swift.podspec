@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CGXAlertViewController-Swift"    #存储库名称
-  s.version      = "1.0.3"      #版本号，与tag值一致
+  s.version      = "1.0.4"      #版本号，与tag值一致
   s.summary      = "a CGXAlertViewController系统弹框"  #简介
   s.description  = "a CGXAlertViewController系统弹框封装"  #描述
   s.homepage     = "https://github.com/974794055/CGXAlertViewController-Swift"      #项目主页，不是git地址
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true #是否支持ARC
   s.frameworks = 'UIKit', "Foundation", "CoreLocation"
 
-  s.source_files  = "CGXAlertViewController/*.swift" #需要托管的源代码路径
+  s.source_files  = "CGXAlertViewController","CGXAlertViewController/**/*.(swift)" #需要托管的源代码路径
 
 end
 

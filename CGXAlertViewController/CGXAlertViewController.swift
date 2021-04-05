@@ -11,16 +11,17 @@ QQ号：974794055
 群名称：
 CGXAlertViewController交流群
 群   号：
-版本： 1.0.3
+版本： 1.0.4
 */
 
 import UIKit
 
-class CGXAlertViewController: NSObject {
+@objc
+public class CGXAlertViewController: NSObject {
      // 按钮点击事件block
-    typealias CGXAlertViewControllerSelectBlock = (_  title: String, _ message: String ,_ btnStr :String) ->()
-    typealias CGXAlertViewControllerTitleBlock = (_  titleModel: CGXAlertTitleModel) ->(Void)
-    typealias CGXAlertViewControllerActionBlock = (_  actionModel: CGXAlertActionModel) ->()
+    public typealias CGXAlertViewControllerSelectBlock = (_  title: String, _ message: String ,_ btnStr :String) ->()
+    public typealias CGXAlertViewControllerTitleBlock = (_  titleModel: CGXAlertTitleModel) ->(Void)
+    public typealias CGXAlertViewControllerActionBlock = (_  actionModel: CGXAlertActionModel) ->()
     
      /*
      title：标题
@@ -30,7 +31,7 @@ class CGXAlertViewController: NSObject {
      titleBlock:修改标题、提示语字体、颜色
      actionBlock：修改按钮字体、颜色
      */
-    class func showAlert(title: String?, message: String?,btnArr:[String],selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+    public class func showAlert(title: String?, message: String?,btnArr:[String],selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
         self.showAlert(title: title, message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
             
         }, actionBlock: { (actionModel) in
@@ -38,7 +39,7 @@ class CGXAlertViewController: NSObject {
         }, selectBlock: selectBlock)
     }
     
-    class func showAlert(title: String?, message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+    public class func showAlert(title: String?, message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
         self.showAlertView(Title: title, Message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
             
         }, actionBlock: { (actionModel) in
@@ -46,7 +47,7 @@ class CGXAlertViewController: NSObject {
         }, selectBlock: selectBlock, preferredStyle: .alert)
     }
     
-    class func showAction(title: String?, message: String?,btnArr:[String],selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+    public class func showAction(title: String?, message: String?,btnArr:[String],selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
         self.showAction(title: title, message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
             
         }, actionBlock: { (actionModel) in
@@ -54,7 +55,7 @@ class CGXAlertViewController: NSObject {
         }, selectBlock: selectBlock)
     }
     
-    class func showAction(title: String?, message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
+    public class func showAction(title: String?, message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock) {
         self.showAlertView(Title: title, Message: message, btnArr: btnArr, titleBlock: { (titleModel) -> (Void) in
             
         }, actionBlock: { (actionModel) in
@@ -67,7 +68,7 @@ class CGXAlertViewController: NSObject {
 // MARK: - 私有方法
 extension CGXAlertViewController
 {
-    private class func showAlertView(Title title: String?,Message message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock,preferredStyle:UIAlertController.Style) {
+    fileprivate class func showAlertView(Title title: String?,Message message: String?,btnArr:[String],titleBlock:@escaping CGXAlertViewControllerTitleBlock ,actionBlock:@escaping CGXAlertViewControllerActionBlock,selectBlock:@escaping CGXAlertViewControllerSelectBlock,preferredStyle:UIAlertController.Style) {
         
         let titleModel:CGXAlertTitleModel = CGXAlertTitleModel.init()
         
